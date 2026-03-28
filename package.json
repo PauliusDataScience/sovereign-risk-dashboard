@@ -1,0 +1,32 @@
+{
+  "name": "sovereign-risk-dashboard",
+  "version": "1.0.0",
+  "description": "A web app for monitoring macroeconomic indicators and a simple sovereign credit risk score.",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src/**/*.js tests/**/*.js",
+    "format": "prettier . --write"
+  },
+  "keywords": [
+    "credit-risk",
+    "dashboard",
+    "data-visualisation",
+    "javascript",
+    "bank-of-england"
+  ],
+  "author": "Paulius",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chart.js": "^4.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.3",
+    "http-server": "^14.1.1",
+    "jest": "^30.3.0",
+    "prettier": "^3.8.1"
+  }
+}
