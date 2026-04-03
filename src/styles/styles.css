@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #12273f;
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+#controls {
+  margin-bottom: 1rem;
+}
+
+#kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.chart-placeholder {
+  height: 200px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
