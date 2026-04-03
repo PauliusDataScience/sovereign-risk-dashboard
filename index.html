@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sovereign Risk Dashboard</title>
+  <link rel="stylesheet" href="src/styles/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Sovereign Risk Dashboard</h1>
+  </header>
+
+  <main>
+
+    <!-- Country Selector -->
+    <section id="controls">
+      <label for="country-select">Select Country:</label>
+      <select id="country-select">
+        <option value="UK">United Kingdom</option>
+        <option value="US">United States</option>
+        <option value="DE">Germany</option>
+      </select>
+    </section>
+
+    <!-- KPI Cards -->
+    <section id="kpis">
+      <div class="card">Inflation: --</div>
+      <div class="card">Interest Rate: --</div>
+      <div class="card">Debt/GDP: --</div>
+      <div class="card">Risk Score: --</div>
+    </section>
+
+    <!-- Chart Placeholder -->
+    <section id="charts">
+      <h2>Trends</h2>
+      <div class="chart-placeholder">Chart will go here</div>
+    </section>
+
+  </main>
+
+  <script src="src/js/main.js"></script>
+</body>
+</html>
