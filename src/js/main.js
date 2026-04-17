@@ -1,21 +1,24 @@
 const countryData = {
   UK: {
     name: "United Kingdom",
-    inflation: 4.0,
+    inflation: 5.7,
     interestRate: 3.0,
     debtToGdp: 80,
+    inflationHistory: [2.2, 2.8, 4.0, 5.2, 6.3, 5.7],
   },
   US: {
     name: "United States",
-    inflation: 3.5,
+    inflation: 6.2,
     interestRate: 5.0,
     debtToGdp: 110,
+    inflationHistory: [1.9, 3.0, 3.5, 4.6, 5.4, 6.2],
   },
   DE: {
     name: "Germany",
-    inflation: 2.0,
+    inflation: 3.1,
     interestRate: 2.5,
     debtToGdp: 65,
+    inflationHistory: [1.5, 2.2, 2.0, 2.5, 2.8, 3.1],
   },
 };
 
@@ -63,6 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const debtToGdpValue = document.getElementById("debt-to-gdp-value");
   const riskScoreValue = document.getElementById("risk-score-value");
   const riskLevelValue = document.getElementById("risk-level-value");
+  const chartCanvas = document.getElementById("inflation-chart");
+
+  let inflationChart;
 
   function updateDashboard() {
     const selectedCountry = countrySelect.value;
@@ -81,6 +87,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     riskScoreValue.textContent = score.toFixed(1);
     riskLevelValue.textContent = classifyRisk(score);
+
+    updateChart(data);
+  }
+
+  function updateChart(data) {
+    const labels = ["2021", "2022", "2023", "2024", "2025", "2026"];
+
+    if (inflationChart) {
+      inflationChart.destroy();
+    }
+
+    inflationChart = new Chart(chartCanvas, {
+      type: "line",
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: data.name + " Inflation (%)",
+            data: data.inflationHistory,
+            borderWidth: 2,
+            tension: 0.2,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+      },
+    });
   }
 
   countrySelect.addEventListener("change", updateDashboard);

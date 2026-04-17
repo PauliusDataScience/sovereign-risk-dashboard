@@ -30,6 +30,16 @@ main {
   margin-bottom: 2rem;
 }
 
+#charts {
+  background: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#charts h2 {
+  margin-top: 0;
+}
+
 .card {
   background: #f3f4f6;
   padding: 1rem;
