@@ -59,6 +59,8 @@ function classifyRisk(score) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  const loadingMessage = document.getElementById("loading-message");
+  const errorMessage = document.getElementById("error-message");
   const countrySelect = document.getElementById("country-select");
   const selectedCountryDisplay = document.getElementById("selected-country-display");
   const inflationValue = document.getElementById("inflation-value");
@@ -71,8 +73,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let inflationChart;
 
   function updateDashboard() {
+  loadingMessage.hidden = false;
+  errorMessage.hidden = true;
+
+  try {
     const selectedCountry = countrySelect.value;
     const data = countryData[selectedCountry];
+
+    if (!data) {
+      throw new Error("No data found for selected country");
+    }
 
     selectedCountryDisplay.textContent = "Showing data for: " + data.name;
     inflationValue.textContent = data.inflation + "%";
@@ -89,7 +99,13 @@ document.addEventListener("DOMContentLoaded", function () {
     riskLevelValue.textContent = classifyRisk(score);
 
     updateChart(data);
+  } catch (error) {
+    errorMessage.hidden = false;
+    console.error(error);
+  } finally {
+    loadingMessage.hidden = true;
   }
+}
 
   function updateChart(data) {
     const labels = ["2021", "2022", "2023", "2024", "2025", "2026"];
