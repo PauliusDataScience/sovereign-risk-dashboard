@@ -23,6 +23,18 @@ main {
   font-weight: bold;
 }
 
+#loading-message {
+  margin-top: 0.5rem;
+  color: #444;
+  font-style: italic;
+}
+
+#error-message {
+  margin-top: 0.5rem;
+  color: #b00020;
+  font-weight: bold;
+}
+
 #kpis {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
