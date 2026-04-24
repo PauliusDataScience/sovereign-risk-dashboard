@@ -118,6 +118,8 @@ I added a line chart using Chart.js to visualise inflation trends over time. Thi
 
 I made additional improvements by including loading and error states and colour-coded risk levels to improve usability.
 
+![screenshot](docs/screenshots/Dashboard_screenshot.jpeg)
+
 The development process was intentionally incremental, with each feature building on the previous one. This reduced complexity, made debugging easier, and ensured that functionality was continuously working throughout development. It also aligned with the project’s use of version control and issue tracking, where i developed each feature in isolation and then merged into the main branch.
 
 ## Testing and TDD
@@ -155,6 +157,8 @@ This workflow is triggered on:
 
 - Push to the repository
 - Pull requests to the main branch
+
+![screenshot](docs/screenshots/CI_screenshot.png)
 
 This ensures that all changes are automatically tested, helping to prevent regressions and maintain code quality.This automated testing process ensures that all changes are validated before being merged, supporting a reliable and maintainable development workflow.
 
