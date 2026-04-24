@@ -68,7 +68,7 @@ The project followed an Agile-inspired development approach using GitHub Project
 
 Work was broken down into small, manageable features and tracked using issues. Each issue represented a specific task or feature, such as implementing the country selector, risk scoring logic, or chart functionality.
 
-A Kanban-style board (Github projects) was used with columns such as:
+A Kanban-style board (GitHub projects) was used with columns such as:
 
 - Backlog
 - In progress
@@ -82,11 +82,13 @@ This approach allowed for:
 - Clear tracking of progress
 - Flexibility to refine requirements during development
 
+This approach reflects key Agile principles, including iterative development, continuous feedback, and incremental delivery of features. Each feature was developed, tested, and integrated before moving on to the next, ensuring a stable and maintainable codebase.
+
 ## Ticketing and Branch Strategy
 
 Each feature I developed was created using a structured workflow: 
 
-1. I created a Github issue to describe the deature
+1. I created a GitHub issue to describe the feature
 2. I created a dedicated branch (e.g. feature/risk-score)
 3. Changes were committed and pushed to the branch
 4. I opened a Pull Request
@@ -115,6 +117,8 @@ I wrote unit tests using Jest to validate the risk scoring and classification lo
 I added a line chart using Chart.js to visualise inflation trends over time. This helped enhance the dashboard by introducing a visual data component.
 
 I made additional improvements by including loading and error states and colour-coded risk levels to improve usability.
+
+The development process was intentionally incremental, with each feature building on the previous one. This reduced complexity, made debugging easier, and ensured that functionality was continuously working throughout development. It also aligned with the project’s use of version control and issue tracking, where i developed each feature in isolation and then merged into the main branch.
 
 ## Testing and TDD
 
@@ -152,7 +156,7 @@ This workflow is triggered on:
 - Push to the repository
 - Pull requests to the main branch
 
-This ensures that all changes are automatically tested, helping to prevent regressions and maintain code quality.
+This ensures that all changes are automatically tested, helping to prevent regressions and maintain code quality.This automated testing process ensures that all changes are validated before being merged, supporting a reliable and maintainable development workflow.
 
 ## User Documentation
 
@@ -200,7 +204,7 @@ The Sovereign Risk Dashboard is a simple web application that allows users to ex
 ### Project Setup
 
 ```bash
-git clone <https://github.com/PauliusDataScience/sovereign-risk-dashboard.git>
+git clone https://github.com/PauliusDataScience/sovereign-risk-dashboard.git
 cd sovereign-risk-dashboard
 npm install
 ```
@@ -277,3 +281,5 @@ The Sovereign Risk Dashboard successfully demonstrates how macroeconomic data ca
 - More advanced visualisations
 - Additional economic indicators
 - Improved risk modelling techniques
+
+Overall, the project successfully meets the objectives of the assignment by combining software engineering practices with data-oriented thinking. It demonstrates how a simple analytical tool can be designed, developed, tested, and evaluated using modern development workflows.
