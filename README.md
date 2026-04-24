@@ -10,6 +10,8 @@
 
 ## Design Prototype
 
+![Screenshot](Sovereign_Risk_Dashboard_Wireframe.png)
+
 ## Project Management Approach
 
 ## Ticketing and Branch Strategy
