@@ -76,3 +76,15 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+.low-risk{
+  color:#1f7a1f
+}
+
+.medium-risk{
+  color:#b36b00
+}
+
+.high-risk{
+  color:#b00020
+}

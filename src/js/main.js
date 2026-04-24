@@ -96,7 +96,20 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     riskScoreValue.textContent = score.toFixed(1);
-    riskLevelValue.textContent = classifyRisk(score);
+    
+    const riskLevel = classifyRisk(score);
+
+    riskLevelValue.textContent = riskLevel;
+
+    riskLevelValue.classList.remove("low-risk", "medium-risk", "high-risk");
+
+    if (riskLevel === "Low Risk") {
+      riskLevelValue.classList.add("low-risk");
+    } else if (riskLevel === "Medium Risk") {
+      riskLevelValue.classList.add("medium-risk");
+    } else {
+      riskLevelValue.classList.add("high-risk");
+    }
 
     updateChart(data);
   } catch (error) {
