@@ -10,7 +10,7 @@
 
 ## Design Prototype
 
-![Screenshot](Sovereign_Risk_Dashboard_Wireframe.png)
+![Screenshot](docs/screenshots/Sovereign_Risk_Dashboard_Wireframe.png)
 
 ## Project Management Approach
 
